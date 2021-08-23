@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Category</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <ul class="main-ul">
+                <li>
+                    <div>
+                        <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Category 1</span></a>
+                    </div>
+                    <ul id="sub-ul-id" class="sub-ul">
+                        <li id="first-li">
+                            <div>
+                                <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Inner Category 1</span></a>
+                            </div>
+
+                            <!-- <ul style="display: none;" class="sub-ul-inner">
+                                <li>
+                                    <div>
+                                        <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Inner Category Inside</span></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Inner Category Inside</span></a>
+                                    </div>
+                                </li>
+                            </ul> -->
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Inner Category 2</span></a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div>
+                        <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Category 2</span></a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Category 3</span></a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Category 4</span></a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Category 5</span></a>
+                    </div>
+                    <ul id="sub-ul-id" class="sub-ul">
+                        <li id="first-li">
+                            <div>
+                                <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Inner Category 1</span></a>
+                            </div>
+
+                            <!-- <ul style="display: none;" class="sub-ul-inner">
+                                <li>
+                                    <div>
+                                        <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Inner Category Inside</span></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Inner Category Inside</span></a>
+                                    </div>
+                                </li>
+                            </ul> -->
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Inner Category 2</span></a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // $(function() {
+        //     $(".container .main-ul li").mouseenter(function() {
+        //         $(".sub-ul").show(500)
+        //     });
+            
+        //     $(".container .main-ul li .sub-ul li").mouseenter(function() {
+        //         $(".sub-ul-inner").show(500)
+        //     });
+        // });
+
+
+
+        $(window).on('load', function(){
+            if($(".main-ul > li").children("div").length) {
+            $(".main-ul > li").children("div").parent().addClass("hasSubMenu");
+            $(".main-ul > li").children("div").parent().append("<span class='hs-toggle'></span>");
+        }
+
+        $(".hs-toggle").on("click", function(){
+            // $(".module-categories").toggleClass("showSub");
+            $(".hs-toggle").parent().removeClass("showThisSub");
+            $(this).parent().addClass("showThisSub");
+
+        });
+
+
+        // if($(".categorySideBar .module-categories>.well>ul.nav>li").length>5){
+        //     $(".categorySideBar").append("<span class='viewMoreCategory'>weitere anzeigen</span>");
+        // }
+
+        // $(".viewMoreCategory").on("click", function(){
+        //     $(".categorySideBar .module-categories>.well>ul.nav").toggleClass("show_ucmAll");
+
+        //     var currentVMbtnText = $(".viewMoreCategory").text();
+        //     if (currentVMbtnText === "weitere anzeigen") {
+        //         $(".viewMoreCategory").html("ausblenden");
+        //     } else {
+        //         $(".viewMoreCategory").html("weitere anzeigen");
+        //     }
+        //     //alert(currentVMbtnText);
+        // });
+
+    });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Category</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <ul class="main-ul">
+                <li>
+                    <div>
+                        <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Category 1</span></a>
+                    </div>
+                    <ul id="sub-ul-id" class="sub-ul">
+                        <li id="first-li">
+                            <div>
+                                <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Inner Category 1</span></a>
+                            </div>
+
+                            <ul class="sub-ul-inner">
+                                <li>
+                                    <div>
+                                        <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Inner Category Inside</span></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Inner Category Inside</span></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Inner Category 2</span></a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div>
+                        <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Category 2</span></a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Category 3</span></a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Category 4</span></a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Category 5</span></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $(".container .main-ul li").mouseenter(function() {
+                $(".sub-ul").show(500)
+            });
+            
+            $(".container .main-ul li .sub-ul li").mouseenter(function() {
+                $(".sub-ul-inner").show(500)
+            });
+        });
+    </script>
+</body>
+</html> -->

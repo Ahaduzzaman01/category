@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+section{
+    width: 40%;
+    margin: auto;
+}
+
+/* .container .main-ul {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    overflow: hidden;
+   } */
+
+.container .main-ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.container .main-ul > li, 
+.container .main-ul > li .sub-ul li{
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.container .main-ul > li .sub-ul li{
+    position: relative;
+    left: 30px;
+}
+
+.container .main-ul > li > div,
+.container .main-ul > li .sub-ul li div{
+    border: 1px solid rgb(136, 136, 136);
+    border-left: none;
+    border-right: none;
+    padding: 8px 0px;
+}
+
+.container .main-ul li div a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.container .main-ul li div a > span {
+    margin-left: 10px;
+}
+
+/* .sub-ul, .sub-ul-inner{
+    display: none;
+}
+
+.container .main-ul li:hover .sub-ul{
+    display: block;
+}
+
+.container .main-ul li .sub-ul li:hover .sub-ul-inner{
+    display: block;
+} */
+
+
+.container .main-ul > li{
+    display: block;
+    width: 100%;
+}
+
+
+
+
+
+
+.sub-ul{
+    position: relative;
+    left: -200%;
+    display: block !important;
+    transition: .7s ease;
+    opacity: 0;
+    height: 0px;
+    overflow: hidden;
+}
+
+.container .main-ul li:hover .sub-ul{
+    position: relative;
+    left: 0;
+    opacity: 1;
+    height: auto;
+    overflow: hidden;
+}
+
+
+@media only screen and (max-width: 991px) {
+    .hs-toggle {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: #000;
+        top: 15px;
+        right: 0px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .main-ul li {
+        position: relative;
+    }
+
+    span.hs-toggle:after {
+        position: absolute;
+        content: "+";
+        color: #fff;
+        font-size: 18px;
+        line-height: 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* .showThisSub ul {
+        padding-left: 20px;
+        border: none;
+        position: relative;
+        left: 0;
+        opacity: 1;
+        height: auto;
+        overflow: hidden;
+    } */
+  }
+
+@media only screen and (max-width: 768px) {
+    section{
+        width: 65%;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+      section{
+          width: 80%;
+      }
+    }
