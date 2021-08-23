@@ -51,6 +51,31 @@
                     <div>
                         <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Category 3</span></a>
                     </div>
+                    <ul id="sub-ul-id" class="sub-ul">
+                        <li id="first-li">
+                            <div>
+                                <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Inner Category 1</span></a>
+                            </div>
+
+                            <!-- <ul style="display: none;" class="sub-ul-inner">
+                                <li>
+                                    <div>
+                                        <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Inner Category Inside</span></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Inner Category Inside</span></a>
+                                    </div>
+                                </li>
+                            </ul> -->
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#"><i class="fas fa-long-arrow-alt-right"></i><span>Inner Category 2</span></a>
+                            </div>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <div>
@@ -107,9 +132,9 @@
 
 
         $(window).on('load', function(){
-            if($(".main-ul > li").children("div").length) {
-            $(".main-ul > li").children("div").parent().addClass("hasSubMenu");
-            $(".main-ul > li").children("div").parent().append("<span class='hs-toggle'></span>");
+            if($(".main-ul > li").children("ul").length) {
+            $(".main-ul > li").children("ul").parent().addClass("hasSubMenu");
+            $(".main-ul > li").children("ul").parent().append("<span class='hs-toggle'></span>");
         }
 
         $(".hs-toggle").on("click", function(){
